@@ -1,48 +1,28 @@
-const data = `[
-    {
-        "type": "project",
-        "title": "demys",
-        "description": "demystified command line editor (v0.1.0-alpha)",
-        "links": [
-            {
-                "display": "Github Repo",
-                "url": "https://github.com/wnuspl/demys"
-            },
-            {
-                "display": "Latest Release",
-                "url": "https://github.com/wnuspl/demys/releases/download/v0.1.0-alpha/demys.exe"
-            }
-        ]   
-    },
-    {
-        "type": "project",
-        "title": "tennis elo rankings",
-        "description": "elo system for atp players tracking all-time greats and modern talents",
-        "links": [
-            {
-                "display": "Github Repo",
-                "url": "https://github.com/wnuspl/tennis-elo"
-            }
-        ]   
+fetch('src/content.json')
+  .then(response => response.text())
+  .then(text => {
+    const json = JSON.parse(text);
+    renderContent(json);
+});
+
+
+
+function renderContent(json) {
+    const contentSection = document.getElementById("content");
+
+    for (const section of json) {
+        let item;
+        switch (section.type) {
+            case "project":
+                item = createProjectElement(section);
+                break;
+        }
+
+        contentSection.appendChild(item);
+        contentSection.appendChild(document.createElement("br"));
     }
-]`;
-
-
-const sectionList = JSON.parse(data);
-
-const contentSection = document.getElementById("content");
-
-for (const section of sectionList) {
-    let item;
-    switch (section.type) {
-        case "project":
-            item = createProjectElement(section);
-            break;
-    }
-
-    contentSection.appendChild(item);
-    contentSection.appendChild(document.createElement("br"));
 }
+
 
 
 function createProjectElement(project) {
