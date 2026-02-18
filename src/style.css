@@ -1,13 +1,5 @@
-.header h1 {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    padding: 1vw;
-}
+@import "tailwindcss";
 
-.project {
-    font-family: 'Courier New', Courier, monospace;
-    padding: 1vw;
-}
-.project h {
-    font-weight: bold;
+@theme {
+    --font-courier: 'Courier New', Courier, monospace;
 }

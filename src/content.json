@@ -5,7 +5,7 @@
         "description": "demystified command line editor (v0.1.0-alpha)",
         "links": [
             {
-                "display": "Github Repo",
+                "display": "Repo",
                 "url": "https://github.com/wnuspl/demys"
             },
             {
@@ -20,9 +20,24 @@
         "description": "elo system for atp players tracking all-time greats and modern talents",
         "links": [
             {
-                "display": "Github Repo",
+                "display": "Repo",
                 "url": "https://github.com/wnuspl/tennis-elo"
             }
         ]   
+    },
+    {
+        "type": "project",
+        "title": "burge",
+        "description": "basic uniform rust game engine",
+        "links": [
+            {
+                "display": "Repo",
+                "url": "https://github.com/wnuspl/burge_v2"
+            },
+            {
+                "display": "Demo Video",
+                "url": "https://youtu.be/k8k7KMuwGwg?si=QMfOUCTggdUFwq3H"
+            }
+        ]
     }
 ]
