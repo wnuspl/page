@@ -33,6 +33,10 @@
             {
                 "display": "Repo",
                 "url": "https://github.com/wnuspl/showchoir-rankings/tree/main"
+            },
+            {
+                "display": "Explore",
+                "url": "/scc"
             }
         ]
     },
