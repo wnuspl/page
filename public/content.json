@@ -27,6 +27,17 @@
     },
     {
         "type": "project",
+        "title": "showchoir rankings",
+        "description": "yearly elo-based rankings",
+        "links": [
+            {
+                "display": "Repo",
+                "url": "https://github.com/wnuspl/showchoir-rankings/tree/main"
+            }
+        ]
+    },
+    {
+        "type": "project",
         "title": "burge",
         "description": "basic uniform rust game engine",
         "links": [
