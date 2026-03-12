@@ -1,5 +1,5 @@
 import RankingView from "./RankingView"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function App() {
   const [year, setYear] = useState<number>(2026);
