@@ -1,15 +1,17 @@
 import { Route, Routes, Link } from "react-router-dom";
 import MainApp from "./main/App.tsx"
 import SccApp from "./scc-rank/App.tsx"
-// import "./style.css"
+
 function App() {
     return (
         <>
-            <div className="font-courier font-bold text-xl p-4">
-                <Link to="/">
-                    <h1>Will Nuspl</h1>
+            <div className="p-4">
+                <Link to="/" className="font-bold text-xl hover:underline">
+                    Will Nuspl
                 </Link>
             </div>  
+
+            <hr />
 
             <Routes>
                 <Route path="/" element={<MainApp />} />

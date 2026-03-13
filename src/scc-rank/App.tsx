@@ -1,6 +1,8 @@
 import RankingView from "./RankingView"
 import { useState } from "react"
 
+
+
 function App() {
   const [year, setYear] = useState<number>(2026);
 
@@ -11,12 +13,12 @@ function App() {
     setYear(year+1);
   }
   return (
-    <>
-    <button onClick={backYear}>{"<-"}</button>
+    <div className="p-4">
+    <button onClick={backYear} className="text-xl hover:text-blue-600 p-2">←</button>
     {year}
-    <button onClick={forwardYear}>{"->"}</button>
+    <button onClick={forwardYear} className="text-xl hover:text-blue-600 p-2">→</button>
     <RankingView year={year} />
-    </>
+    </div>
   )
 }
 

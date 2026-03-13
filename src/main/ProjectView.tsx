@@ -7,12 +7,12 @@ interface ProjectEntryProps {
 }
 function ProjectEntry({title, description, links}: ProjectEntryProps) {
     return (
-        <div>
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <div>
+        <div className="flex-row p-2">
+            <h2 className="text-lg font-semibold break-after-auto">{title}</h2>
+            <p className="text-base bold">{description}</p>
+            <div className="flex-col">
                 {links.map(link => (
-                    <a key={link.display} href={link.url}>{link.display}</a>
+                    <a key={link.display} href={link.url} className="p-2 text-blue-500 hover:underline">{link.display}</a>
                 ))}
             </div>
         </div>
@@ -32,11 +32,11 @@ function ProjectView() {
     }
 
     return (
-        <>
+        <div className="p-4">
         {data.map((entry) => (
             <ProjectEntry key={entry.title} title={entry.title} description={entry.description} links={entry.links} />
         ))}
-        </>
+        </div>
     )
 }
 
